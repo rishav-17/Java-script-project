@@ -215,7 +215,7 @@
     margin-top: 10px;
 }
 
-.result{
+.Result{
     display: flex;
     border: 1px solid whitesmoke;
     flex-wrap: wrap;
