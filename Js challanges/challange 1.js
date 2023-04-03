@@ -3,11 +3,11 @@
 
 //age in days
 function ageindays(){
-var birthyear = prompt('What year you were born my friend? ');
-var presentyear =prompt('what is the year going mate? ');
+var birthyear = prompt('What year you were born? ');
+var presentyear =prompt('what is the year going? ');
 var age = (presentyear-birthyear)*365;
 var h1 = document.createElement('h1');
-var textanswer = document.createTextNode('You are ' + age + 'days old bukaroo!!' );
+var textanswer = document.createTextNode('You are ' + age + 'days old my friend!' );
 h1.setAttribute('id', 'ageindays');
 h1.appendChild(textanswer);
 document.getElementById('flex-result').appendChild(h1);
@@ -20,7 +20,7 @@ function reset(){
 function generatecat(){
     var image = document.createElement('img');
     var div = document.getElementById('cat');
-    image.src ="https://c.tenor.com/GZo3q_VkgVcAAAAC/cute-laughing-cat.gif";
+    image.src ="http://edgecats.net/";
     div.appendChild(image);
 }
 function resetcat(){
@@ -28,7 +28,7 @@ function resetcat(){
     document.getElementById('cat').remove();
 }
 
-//stone paper scissor
+//Stone, paper and scissors game.
 const computerChoiceDisplay = document.getElementById('computer-choice')
 const userChoiceDisplay = document.getElementById('user-choice')
 const resultDisplay = document.getElementById('result')
@@ -61,25 +61,25 @@ function generateComputerChoice() {
 
 function getResult() {
   if (computerChoice === userChoice) {
-    result = 'Gave a good competiton!'
+    result = 'its a draw!'
   }
   if (computerChoice === 'rock' && userChoice === "paper") {
-    result = 'You won'
+    result = 'you win!'
   }
-  else if (computerChoice === 'rock' && userChoice === "scissors") {
-    result = 'You lost'
+  if (computerChoice === 'rock' && userChoice === "scissors") {
+    result = 'you lost!'
   }
-  else if (computerChoice === 'paper' && userChoice === "scissors") {
-    result = 'YOU won'
+  if (computerChoice === 'paper' && userChoice === "scissors") {
+    result = 'you win!'
   }
-  else if (computerChoice === 'paper' && userChoice === "rock") {
-    result = 'You lost'
+  if (computerChoice === 'paper' && userChoice === "rock") {
+    result = 'you lose!'
   }
-  else if (computerChoice === 'scissors' && userChoice === "rock") {
-    result = 'You won'
+  if (computerChoice === 'scissors' && userChoice === "rock") {
+    result = 'you win!'
   }
-  else if (computerChoice === 'scissors' && userChoice === "paper") {
-    result = 'You lost'
+  if (computerChoice === 'scissors' && userChoice === "paper") {
+    result = 'you lose!'
   }
   resultDisplay.innerHTML = result
 }
